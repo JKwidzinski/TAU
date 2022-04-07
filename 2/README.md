@@ -1,11 +1,12 @@
 Tutorialsninja:
+    
     1.Rejestracja
         -rozwinięcie opcji konta
         -kliknięcie w register
         -uzupełnienie odpowiednimi danymi
         -zatwierdzenie warunków
         -potwierdzenie zarejestrowania
-   
+    
     2.Logowanie
         -rozwinięcie opcji konta
         -kliknięcie w login
@@ -13,6 +14,7 @@ Tutorialsninja:
         -potwierdzenie logowania
 
 Allegro
+    
     1.Wyszukanie "koszulka"
         -zaakceptowanie cookies
         -wpisanie w pole tekstowe od wyszukiwania "koszulka"
