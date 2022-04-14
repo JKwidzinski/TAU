@@ -10,6 +10,8 @@ from webdriver_manager.firefox import GeckoDriverManager
 import time
 import logging
 
+logging.basicConfig(filename='tutorialsNinjaTestsLog.log', filemode='w', format='%(name)s - %(levelname)s - %(message)s')
+
 #Email needs to be changed in order to register account(acc with this email exists)
 def ChromeRegisterTest():
     driver = webdriver.Chrome(service=ChromeService(ChromeDriverManager().install()))
