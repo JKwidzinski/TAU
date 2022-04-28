@@ -19,7 +19,7 @@ class TestSelenium():
     @pytest.fixture()
     def setup(self):
         global driver
-        self.driver = driver = webdriver.Chrome(service=ChromeService(ChromeDriverManager().install()))
+        self.driver = webdriver.Chrome(service=ChromeService(ChromeDriverManager().install()))
         self.driver.maximize_window()
         yield
         self.driver.close()
