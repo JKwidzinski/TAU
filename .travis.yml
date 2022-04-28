@@ -3,6 +3,6 @@ python:
   - "3.10.0"
 dist: bionic
 install:
-  - pip install -r /3/requirements.txt
+  - pip install -r \3\requirements.txt
 script:
-  - pytest /3/test.py
+  - pytest \3\test.py
