@@ -1,7 +1,8 @@
 language: python
 python:
   - "3.10.0"
+dist: bionic
 install:
   - pip install -r requirements.txt
 script:
-  - pytest -v -s /3/test.py
+  - pytest /3/test.py
