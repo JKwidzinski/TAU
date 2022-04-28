@@ -5,5 +5,4 @@ dist: bionic
 script:
   - cd 3
   - pip install -r requirements.txt
-  - cd 3
   - pytest test.py
