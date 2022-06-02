@@ -11,6 +11,6 @@ def calculate_roots(a,b,c):
     elif delta < 0:
         return None
     else:
-        return (float("{:.2f}".format((-b + sqrt(delta))/(2*a))) , float("{:.2f}".format((-b - sqrt(delta))/(2*a))))
+        return [float("{:.2f}".format((-b + sqrt(delta))/(2*a))) , float("{:.2f}".format((-b - sqrt(delta))/(2*a)))]
 
 print(calculate_roots(3,6,3))

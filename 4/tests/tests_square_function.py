@@ -1,9 +1,19 @@
 import pytest
 from square_function import calculate_roots
+from get_data import getdata
 
+data = getdata('../data.json', "square")
 
 class TestsSquareFunction:
-    @pytest.mark.parametrize("a,b,c,result", [(3,6,2,(-0.42, -1.58)) , (2,4,1,(-0.29, -1.71))])
+    @classmethod
+    def setup(cls):
+        print('\nsetup squarefunction tests')
+
+    @classmethod
+    def teardown(cls):
+        print('\nteardown squarefunction tests')
+    
+    @pytest.mark.parametrize("a,b,c,result", data)
     def test_normalvalues_tworoots(self,a,b,c,result):
         assert calculate_roots(a,b,c) == result
 

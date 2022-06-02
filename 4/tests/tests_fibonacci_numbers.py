@@ -1,9 +1,19 @@
 import pytest
 from fibonacci_numbers import fibonacci
+from get_data import getdata
+
+data = getdata('../data.json', "fibonacci")
 
 class TestsFibonacciNumbers:
+    @classmethod
+    def setup(cls):
+        print('\nsetup fibonacci tests')
+
+    @classmethod
+    def teardown(cls):
+        print('\nteardown fibonacci tests')
     
-    @pytest.mark.parametrize("a,result", [(9,34) , (12,144)])
+    @pytest.mark.parametrize("a,result", data)
     def test_positiveint_posivitevalue(self,a,result):
         assert fibonacci(a) == result
         

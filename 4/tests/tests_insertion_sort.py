@@ -1,9 +1,20 @@
+from webbrowser import get
 import pytest
 from insertion_sort import insertionsort
+from get_data import getdata
+
+data = getdata('../data.json', "insertion")
 
 class TestsInsertionSort:
+    @classmethod
+    def setup(cls):
+        print('\nsetup insertionsort tests')
+
+    @classmethod
+    def teardown(cls):
+        print('\nteardown insertionsort tests')
     
-    @pytest.mark.parametrize("arr,result", [([7,3,5],[3,5,7]) , ([151,12,15,111],[12,15,111,151])])
+    @pytest.mark.parametrize("arr,result", data)
     def test_intvalues_sortedarray(self,arr,result):
         assert insertionsort(arr) == result
         

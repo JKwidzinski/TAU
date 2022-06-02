@@ -1,8 +1,19 @@
 import pytest
 from bucket_sort import bucketsort
+from get_data import getdata
+
+data = getdata('../data.json', "bucket")
 
 class TestsBucketSort:
-    @pytest.mark.parametrize("arr,n,result", [([7,3,5],3,[3,5,7]) , ([151,12,15,111],3,[12,15,111,151])])
+    @classmethod
+    def setup(cls):
+        print('\nsetup bucketsort tests')
+
+    @classmethod
+    def teardown(cls):
+        print('\nteardown bucketsort tests')
+    
+    @pytest.mark.parametrize("arr,n,result", data)
     def test_intvalues_sortedarray(self,arr,n,result):
         assert bucketsort(arr,n) == result
         
